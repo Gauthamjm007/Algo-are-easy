@@ -1,28 +1,28 @@
-import { filter, defaultYield, doneYield } from "./helperFunctions";
+import { defaultYield, doneYield, swapYield } from "./helperFunctions";
 
-const getPosition = (num, place) => {
-  return Math.floor(Math.abs(num) / Math.pow(10, place)) % 10;
-};
+function* selectionYield(arr, filteArr, color) {
+  yield [...arr].map((num) => ({
+    num,
+    color: filteArr.includes(num) ? color : null
+  }));
+  return;
+}
 
-export function* radixSort(arr) {
+export function* selectionSort(arr) {
   let arrCopy = [...arr];
   let len = arrCopy.length;
-
-  const maxLength = Math.max(...arrCopy).toString().length;
-  for (let i = 0; i < maxLength; i++) {
-    let buckets = Array.from({ length: 10 }, () => []);
-    for (let j = 0; j < len; j++) {
-      let pos = getPosition(arrCopy[j], i);
-      buckets[pos].push(arrCopy[j]);
-      let newArr = [...[].concat(...buckets), ...arrCopy.slice(j + 1)];
-      yield [...newArr].map((num) => filter(num, [...buckets[pos]]));
+  for (let i = 0; i < len - 1; ++i) {
+    let j_min = i;
+    for (let j = i + 1; j < len; ++j) {
+      yield* selectionYield(arrCopy, [arrCopy[j_min]], "#0000FF");
+      yield* selectionYield(arrCopy, [arrCopy[j_min], arrCopy[j]], "#FF0000");
+      if (arrCopy[j] < arrCopy[j_min]) {
+        j_min = j;
+      }
     }
-
-    arrCopy = [].concat(...buckets);
-    for (let pos = 0; pos < buckets.length; ++pos) {
-      yield [...arrCopy].map((num) => filter(num, [...buckets[pos]]));
+    if (j_min !== i) {
+      yield* swapYield(arrCopy, j_min, i);
     }
-    yield* defaultYield(arrCopy);
   }
   yield* doneYield(arrCopy);
   yield* defaultYield(arrCopy);
