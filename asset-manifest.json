@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Algo-are-easy/static/css/main.6b3add77.chunk.css",
+    "main.js": "/Algo-are-easy/static/js/main.8f66e68b.chunk.js",
+    "main.js.map": "/Algo-are-easy/static/js/main.8f66e68b.chunk.js.map",
+    "runtime-main.js": "/Algo-are-easy/static/js/runtime-main.7542be30.js",
+    "runtime-main.js.map": "/Algo-are-easy/static/js/runtime-main.7542be30.js.map",
+    "static/js/2.e1ec0d28.chunk.js": "/Algo-are-easy/static/js/2.e1ec0d28.chunk.js",
+    "static/js/2.e1ec0d28.chunk.js.map": "/Algo-are-easy/static/js/2.e1ec0d28.chunk.js.map",
+    "index.html": "/Algo-are-easy/index.html",
+    "precache-manifest.7796c5711b40d0fdcee04ef76997a104.js": "/Algo-are-easy/precache-manifest.7796c5711b40d0fdcee04ef76997a104.js",
+    "service-worker.js": "/Algo-are-easy/service-worker.js",
+    "static/css/main.6b3add77.chunk.css.map": "/Algo-are-easy/static/css/main.6b3add77.chunk.css.map",
+    "static/js/2.e1ec0d28.chunk.js.LICENSE.txt": "/Algo-are-easy/static/js/2.e1ec0d28.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7542be30.js",
+    "static/js/2.e1ec0d28.chunk.js",
+    "static/css/main.6b3add77.chunk.css",
+    "static/js/main.8f66e68b.chunk.js"
+  ]
+}
