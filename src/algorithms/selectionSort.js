@@ -14,8 +14,8 @@ export function* selectionSort(arr) {
   for (let i = 0; i < len - 1; ++i) {
     let j_min = i;
     for (let j = i + 1; j < len; ++j) {
-      yield* selectionYield(arrCopy, [arrCopy[j_min]], "#0000FF");
-      yield* selectionYield(arrCopy, [arrCopy[j_min], arrCopy[j]], "#FF0000");
+      yield* selectionYield(arrCopy, [arrCopy[j_min]], "#737373");
+      yield* selectionYield(arrCopy, [arrCopy[j_min], arrCopy[j]], "#f2f2f2");
       if (arrCopy[j] < arrCopy[j_min]) {
         j_min = j;
       }

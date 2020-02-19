@@ -31,9 +31,7 @@ export const Main = () => {
           const { num, color } = elem;
           const height = `${((num + 1) / (arrSize + 1)) * 100}%`;
           const backgroundColor =
-            isSorting && color
-              ? color
-              : `hsl(${(num / arrSize) * 360},90%,60%)`;
+            isSorting && color ? color : `hsl(2,1%,${(num / arrSize) * 70}%)`;
           return (
             <div
               key={num}

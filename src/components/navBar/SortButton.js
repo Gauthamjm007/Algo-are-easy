@@ -19,7 +19,11 @@ export const SortButton = ({ algorithms, isSorting }) => {
     <div>
       <Button
         variant="contained"
-        style={{ background: isSorting ? "red" : "green", color: "white" }}
+        style={{
+          background: isSorting ? "black" : "white",
+          color: isSorting ? "white" : "black",
+          borderRadius: 20
+        }}
         onClick={() => handleOnSortClick(algorithms)}
       >
         {isSorting ? "Stop" : "Sort it!"}

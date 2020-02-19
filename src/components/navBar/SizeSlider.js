@@ -2,6 +2,24 @@ import React from "react";
 import { Slider } from "@material-ui/core";
 import { store } from "../../redux/store";
 import { changeArrSize, changeArr, changeArrSorted } from "../../redux/actions";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+
+const muiTheme = createMuiTheme({
+  overrides: {
+    MuiSlider: {
+      thumb: {
+        color: "black"
+      },
+      track: {
+        color: "black"
+      },
+      rail: {
+        color: "black"
+      }
+    }
+  }
+});
 
 const handleOnSizeChange = (event, arrSize) => {
   const arr = [...Array(arrSize).keys()]
@@ -16,18 +34,23 @@ const handleOnSizeChange = (event, arrSize) => {
 export const SizeSlider = ({ arrSize, isSorting }) => {
   return (
     <div className="slider">
-      <p className="label">Size</p>
-      <Slider
-        disabled={isSorting ? true : false}
-        id="array_slider"
-        value={arrSize}
-        aria-labelledby="discrete-slider"
-        valueLabelDisplay="auto"
-        step={3}
-        min={5}
-        max={30}
-        onChange={handleOnSizeChange}
-      />
+      <p className="label">
+        <b>Size</b>
+      </p>
+      <ThemeProvider theme={muiTheme}>
+        <Slider
+          disabled={isSorting ? true : false}
+          id="array_slider"
+          value={arrSize}
+          aria-labelledby="discrete-slider"
+          valueLabelDisplay="auto"
+          color="default"
+          step={3}
+          min={5}
+          max={30}
+          onChange={handleOnSizeChange}
+        />
+      </ThemeProvider>
     </div>
   );
 };

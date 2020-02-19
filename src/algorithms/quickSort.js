@@ -5,9 +5,9 @@ function* swapYieldQuick(arr, i, j, pivot) {
     num,
     color:
       num === pivot
-        ? "#0000FF"
+        ? "#737373"
         : num === arr[i] || num === arr[j]
-        ? "#FF0000"
+        ? "#000000"
         : null
   }));
   arr[i] = arr.splice(j, 1, arr[i])[0];
@@ -15,14 +15,14 @@ function* swapYieldQuick(arr, i, j, pivot) {
     num,
     color:
       num === pivot
-        ? "#0000FF"
+        ? "#737373"
         : num === arr[i] || num === arr[j]
-        ? "#FF0000"
+        ? "#f2f2f2"
         : null
   }));
   yield [...arr].map((num) => ({
     num,
-    color: num === pivot ? "#0000FF" : null
+    color: num === pivot ? "#737373" : null
   }));
   return;
 }

@@ -7,7 +7,9 @@ export const SpeedSlider = ({ speed, isSorting }) => {
   const dispatch = useDispatch();
   return (
     <div className="slider">
-      <p className="label">Speed</p>
+      <p className="label">
+        <b>Speed</b>
+      </p>
       <Slider
         disabled={isSorting ? true : false}
         id="speed_slider"
