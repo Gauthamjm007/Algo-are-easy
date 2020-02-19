@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Algo-are-easy/precache-manifest.7796c5711b40d0fdcee04ef76997a104.js"
+  "/Algo-are-easy/precache-manifest.40baafa7023f055198cfd017b820e2a1.js"
 );
 
 self.addEventListener('message', (event) => {
