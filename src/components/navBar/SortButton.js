@@ -20,8 +20,8 @@ export const SortButton = ({ algorithms, isSorting }) => {
       <Button
         variant="contained"
         style={{
-          background: isSorting ? "black" : "white",
-          color: isSorting ? "white" : "black",
+          background: isSorting ? "black" : "green",
+          color: isSorting ? "white" : "white",
           borderRadius: 20
         }}
         onClick={() => handleOnSortClick(algorithms)}

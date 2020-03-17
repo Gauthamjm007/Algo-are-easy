@@ -9,13 +9,13 @@ const muiTheme = createMuiTheme({
   overrides: {
     MuiSlider: {
       thumb: {
-        color: "black"
+        color: "blue"
       },
       track: {
-        color: "black"
+        color: "blue"
       },
       rail: {
-        color: "black"
+        color: "blue"
       }
     }
   }
@@ -47,7 +47,7 @@ export const SizeSlider = ({ arrSize, isSorting }) => {
           color="default"
           step={3}
           min={5}
-          max={30}
+          max={100}
           onChange={handleOnSizeChange}
         />
       </ThemeProvider>

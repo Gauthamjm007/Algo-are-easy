@@ -16,7 +16,7 @@ export const SpeedSlider = ({ speed, isSorting }) => {
         value={speed}
         aria-labelledby="discrete-slider"
         valueLabelDisplay="auto"
-        step={10}
+        step={100}
         min={500}
         max={2000}
         onChange={(e, speed) => dispatch(changeSpeed(speed))}

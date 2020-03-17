@@ -23,8 +23,7 @@ export const ShuffleButton = ({ arr, isSorting }) => {
       variant="contained"
       onClick={() => handleOnShuffleClick(arr)}
       style={{
-        borderRadius: 20,
-        backgroundColor: "#262626"
+        borderRadius: 20
       }}
     >
       Shuffle
@@ -41,8 +40,7 @@ export const ReverseButton = ({ arr, isSorting }) => {
       variant="contained"
       onClick={() => dispatch(changeArr([...[...arr].reverse()]))}
       style={{
-        borderRadius: 20,
-        backgroundColor: "#262626"
+        borderRadius: 20
       }}
     >
       Reverse
